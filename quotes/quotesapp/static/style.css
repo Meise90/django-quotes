@@ -1,0 +1,25 @@
+body {
+    font-family: verdana;
+}
+
+h3 {
+    color: teal;
+    font-size: 40px;
+
+}
+
+#bg {
+    background-size: 1800px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+
+}
+
+h4 {
+    color: teal;
+    font-size: 20px;
+    text-align: center;
+    padding: 300px;
+
+}

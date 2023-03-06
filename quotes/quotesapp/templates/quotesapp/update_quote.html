@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h4>Update your quote</h4>
+    <form method="post">{% csrf_token %}
+        <input type="text" name="quote" value="{{ quote.content }}">
+        <input type="submit" Value="Update">
+    </form>
+</body>
+</html>

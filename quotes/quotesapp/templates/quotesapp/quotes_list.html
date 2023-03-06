@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body id="bg" style="background-image: url('{% static 'img/90926.jpg'%}')">
+
+    <h3>My daily quotes ♡</h3>
+    <a href="{% url 'quotesapp:quote-create-view' %}"><button>Add quote</button></a>
+
+    <ol>
+    {% for quote in quotes %}
+        <li>
+        <a href="{% url 'quotesapp:quote-detail-view' quote.id %}">{{ quote.content }}</a>
+        <a href="{% url 'quotesapp:quote-update-view' quote.id %}"><button>Update</button></a>
+        <a href="{% url 'quotesapp:quote-delete-view' quote.id %}"><button>Delete</button></a>
+            </li>
+
+    {% endfor %}
+    </ol>
+</body>
+</html>
